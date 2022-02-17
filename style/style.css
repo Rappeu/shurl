@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --main-bg-color: #d9ffff;
+  --main-accent-color: #704e8d;
+  --secondary-accent-color: #402a52;
+  --main-text-color: #272727;
+  --black: #000000;
+  --white: #ffffff;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageContainer-small {
+  max-width: 1200px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#header-logo {
+  height: 80px;
+}
+
+#nav-links {
+  list-style-type: none;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  gap: 40px;
+  padding: 0;
+  margin-left: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--main-text-color);
+}
+
+#signUpContainer {
+  font-family: 'Roboto', sans-serif;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signUpLink {
+  font-size: 2.5rem;
+}
+
+#signUpLink-1 {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+#signUpBackground {
+  background-color: var(--main-accent-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#signUpLink-2 {
+  text-decoration: none;
+  color: var(--white);
+}
+
+
