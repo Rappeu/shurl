@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --main-bg-color: #d9ffff;
+  --main-bg-color: #ccffff;
   --main-accent-color: #704e8d;
   --secondary-accent-color: #402a52;
   --main-text-color: #272727;
@@ -55,6 +55,33 @@ header {
   color: var(--main-text-color);
 }
 
+.nav-link-box{
+  box-sizing: border-box;
+
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: black;
+  height: 2px;
+  margin-top: 5px;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 75%;
+  background-color: var(--main-accent-color);
+}
+
+.nav-link:hover {
+  color: var(--main-accent-color);
+}
+
 #signUpContainer {
   font-family: 'Roboto', sans-serif;
   list-style-type: none;
@@ -72,10 +99,19 @@ header {
   color: var(--main-text-color);
 }
 
+#signUpLink-1:hover {
+  color: var(--main-accent-color);
+}
+
 #signUpBackground {
   background-color: var(--main-accent-color);
   border-radius: 5px;
   padding: 5px 10px;
+}
+
+#signUpBackground:hover {
+  background-color: var(--secondary-accent-color);
+  transition: 0.4s;
 }
 
 #signUpLink-2 {
