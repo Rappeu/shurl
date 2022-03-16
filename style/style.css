@@ -8,6 +8,7 @@
   --black: #000000;
   --white: #ffffff;
   font-size: 62.5%;
+  font-family:'Roboto';
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   height: 100%;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
 .pageContainer-small {
@@ -28,6 +30,7 @@ header {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--main-bg-color);
 }
 
 #nav {
@@ -128,6 +131,9 @@ header {
   padding: 0;
   border: none;
   visibility: show;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #hamburgerMenu:hover {
@@ -135,8 +141,6 @@ header {
 }
 
 #hamburgerMenu .hamburgerLine {
-  display: block;
-  position: absolute;
   content: "";
   background-color: var(--main-accent-color);
   height: 7px;
@@ -146,7 +150,7 @@ header {
 }
 
 #hamburgerMenu .hamburgerLine::before {
-  display: block;
+  display: inline-block;
   position: absolute;
   content: "";
   background-color: var(--main-accent-color);
@@ -155,10 +159,11 @@ header {
   transform: translateY(-20px);
   border-radius: 5px;
   transition: all .7s;
+  right: 0px;
 }
 
 #hamburgerMenu .hamburgerLine::after {
-  display: block;
+  display: inline-block;
   position: absolute;
   content: "";
   background-color: var(--main-accent-color);
@@ -167,6 +172,7 @@ header {
   transform: translateY(20px);
   border-radius: 5px;
   transition: all .7s;
+  right: 0px;
 }
 
 #hamburgerMenu.open .hamburgerLine {
@@ -180,6 +186,47 @@ header {
 #hamburgerMenu.open .hamburgerLine::after {
   transform: translate(0px, 0px) rotate(-45deg);
 }
+
+#hamburgerNav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transform: translateY(-300px);
+  z-index: -1;
+  transition: all .7s ease-in-out;
+}
+
+#hamburgerNav.open {
+  transform: translateY(0px);
+}
+
+.hamburgerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+.hamburgerLink, .hamburgerSignUpLink {
+  display: flex;
+  justify-content: center;
+}
+
+#hamburgerSignUp {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+}
+
+
+
 @media screen and (max-width: 1000px) {
   #nav-links {
     visibility:hidden;
