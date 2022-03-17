@@ -31,6 +31,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-bg-color);
+  z-index: 1;
+  position: relative;
 }
 
 #nav {
@@ -196,9 +198,10 @@ header {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  transform: translateY(-300px);
-  z-index: -1;
-  transition: all .7s ease-in-out;
+  transform: translateY(-400px);
+  z-index: 0;
+  transition: all .8s ease-in-out;
+  background-color: var(--main-bg-color);
 }
 
 #hamburgerNav.open {
@@ -225,20 +228,55 @@ header {
   padding: 0;
 }
 
-
-
-@media screen and (max-width: 1000px) {
-  #nav-links {
-    visibility:hidden;
-  }
-  #signUpContainer {
-    visibility:hidden;
-  }
-  #hamburgerMenu {
-    visibility:show;
-  }
+#heroBox {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 15px;
 }
 
+#heroTitleContainer {
+  width: 60%;
+}
+
+#heroTitle {
+  font-size: 7rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--main-text-color);
+}
+
+#heroDescription {
+  margin: 10px 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: grey
+}
+
+#heroButtonBox{
+  margin: 50px 0;
+}
+
+#heroButton{
+  color: white;
+  background-color: var(--main-accent-color);
+  font-size: 2.5rem;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#heroButton:hover {
+  background-color: var(--secondary-accent-color);
+  transition: 0.4s;
+}
+
+
+
+
+
 @media screen and (max-width: 1000px) {
   #nav-links {
     visibility:hidden;
@@ -248,11 +286,23 @@ header {
   }
   #hamburgerMenu {
     visibility:show;
+  }
+  #heroTitleContainer {
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 1001px) {
   #hamburgerMenu {
     visibility:hidden;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #heroTitle {
+    font-size: 6rem;
+  }
+  #heroDescription {
+    font-size: 2rem;
   }
 }
