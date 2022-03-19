@@ -304,6 +304,45 @@ header {
   text-align: center;
 }
 
+#shorteningContainer2 {
+  height:270px;
+  margin:30px;
+  background-color:var(--white);
+  border-radius:10px;
+  padding: 0;
+}
+
+#lastLinks{
+  list-style: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.lastLink {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lastLink a {
+  text-decoration: none;
+  
+}
+
+.lastLink button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color:var(--black);
+}
+
+.lastLink button:hover {
+  cursor:pointer;
+}
 
 
 @media screen and (max-width: 1000px) {
