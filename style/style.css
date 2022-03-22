@@ -364,12 +364,15 @@ header {
 
 .faq {
   display:flex;
+  position:relative;
   flex-direction: row;
   width:100%;
   justify-content: space-between;
   font-size:2.2rem;
   align-items: center;
   padding: 5px;
+  z-index: 2;
+  background-color: var(--main-bg-color);
 }
 
 .faq:hover {
@@ -390,6 +393,11 @@ header {
   display:flex;
   justify-content: center;
   align-items: center;
+  transition: all .5s ease-in-out;
+}
+
+.faqX.open {
+  transform: rotate(-45deg);
 }
 
 .faqXLine1 {
@@ -411,6 +419,18 @@ header {
   transform:rotate(90deg);
   position:absolute;
   border-radius: 5px;
+}
+
+.faqAnswer {
+  font-size: 1.8rem;
+  margin-top: -150px;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}
+
+.faqAnswer.open {
+  opacity: 1;
+  margin-top: 0;
 }
 
 @media screen and (max-width: 1000px) {

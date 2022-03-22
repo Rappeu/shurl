@@ -21,3 +21,20 @@ window.onresize = function() {
         menuOn = false;
     }
 }
+const faq = document.querySelector('.faq');
+const faqX = document.querySelector('.faqX');
+const faqAnswer = document.querySelector('.faqAnswer');
+let faqActive = false;
+
+faq.addEventListener('click', () => {
+    if(!faqActive) {
+        faqX.classList.add('open');
+        faqAnswer.classList.add('open');
+        faqActive = true;
+    } else {
+        faqX.classList.remove('open');
+        faqAnswer.classList.remove('open');
+        faqActive = false;
+    }
+})
+
