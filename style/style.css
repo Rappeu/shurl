@@ -2,6 +2,7 @@
 
 :root {
   --main-bg-color: #ccffff;
+  --secondary-bg-color: #272727;
   --main-accent-color: #704e8d;
   --secondary-accent-color: #402a52;
   --main-text-color: #272727;
@@ -463,6 +464,51 @@ header {
 
 .faqAnswer4.open {
   margin-top: 0;
+}
+
+footer {
+  background-color: var(--secondary-bg-color);
+}
+
+#footerLimiter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;   
+}
+
+.footerContainer {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  color: var(--white);
+}
+
+.footerContainer h1 {
+  font-size: 2.2rem;
+}
+
+.footerContainer ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight:light;
+  line-height: 1.5;
+}
+
+.footerImageContainer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerImageContainer a {
+  color: var(--white);
+}
+
+.footerImageContainer img {
+  width: 180px;
 }
 
 @media screen and (max-width: 1000px) {
