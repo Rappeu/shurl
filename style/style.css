@@ -468,14 +468,17 @@ header {
 
 footer {
   background-color: var(--secondary-bg-color);
+  display: flex;
+  justify-content: center;
 }
 
 #footerLimiter {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr) 2fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;   
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 10px 0px; 
+  grid-template-areas: 
+    "a b c d e e"; 
 }
 
 .footerContainer {
@@ -497,10 +500,27 @@ footer {
   line-height: 1.5;
 }
 
+.fooCon1 {
+  grid-area: a;
+}
+
+.fooCon2 {
+  grid-area: b;
+}
+
+.fooCon3 {
+  grid-area: c;
+}
+
+.fooCon4 {
+  grid-area: d;
+}
+
 .footerImageContainer {
   display:flex;
   align-items: center;
   justify-content: center;
+  grid-area: e;
 }
 
 .footerImageContainer a {
@@ -553,6 +573,15 @@ footer {
   .faqAnswer {
     font-size: 1.8rem;
   }
+  #footerLimiter {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 10px 0px; 
+    grid-template-areas: 
+      "a b c d"
+      "e e f f"; 
+  }
 }
 
 @media screen and (min-width: 1001px) {
@@ -587,11 +616,36 @@ footer {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #footerLimiter {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 0px; 
+    grid-template-areas: 
+      "a b"
+      "c d"
+      "e e"; 
+  }
+}
+
 @media screen and (max-width: 400px) {
   #heroTitle {
     font-size: 6rem;
   }
   #heroDescription {
     font-size: 2rem;
+  }
+  #footerLimiter {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 0px; 
+    grid-template-areas: 
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"; 
   }
 }
